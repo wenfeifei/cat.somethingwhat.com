@@ -1,0 +1,14 @@
+﻿{
+  //创建用户时用户id的初始值
+  "InitIdNum": 12345,
+  //用户首次登录喵喵看书时送多少喵币
+  "InitCurrency": 10000,
+  //1元可以兑换多少喵币
+  "Currency_Ratio": 200,
+  //是否关闭旧的接口
+  "CloseOldInterface": false,
+  //是否开启微信支付
+  "OpenWxPay": false,
+  //“外国文学”等小说来源的数据请求地址
+  "SpiderRemoteUrl": "http://spider.somethingwhat.com/"
+}

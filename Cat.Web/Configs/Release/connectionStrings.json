@@ -1,0 +1,14 @@
+﻿{
+  //主数据库
+  "CatCoreAppDB": {
+    "DbProvider": "mysql", //可填写："mysql" 或 "sqlserver" .其他数据请自行实现
+    "ConnectionStrings": "server=127.0.0.1;database=cat.book;user=root;password=123456;SslMode = none;"
+  },
+  //Redis数据库
+  "RedisConnectionStrings": "127.0.0.1",
+  //Mongo数据库（用作日志数据库）
+  "MongoDB": {
+    "DBName": "mmbook_log",
+    "ConnectionStrings": "mongodb://localhost:27017"
+  }
+}

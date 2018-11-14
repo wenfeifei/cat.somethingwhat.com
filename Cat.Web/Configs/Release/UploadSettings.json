@@ -1,0 +1,7 @@
+﻿{
+  "Image": {
+    "MaxSize": 2048000, /* 上传大小限制，单位B */
+    "AllowFiles": [ ".png", ".jpg", ".jpeg", ".gif", ".bmp" ], /* 上传图片格式限制 */
+    "PathFormat": "upload/images/{yyyy}{mm}{dd}/{time}{rand:6}_{filename}" /* 上传保存路径,可以自定义保存路径和文件名格式 */
+  }
+}

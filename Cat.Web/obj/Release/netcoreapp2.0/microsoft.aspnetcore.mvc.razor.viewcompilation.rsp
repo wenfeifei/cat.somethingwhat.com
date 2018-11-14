@@ -1,0 +1,5 @@
+D:\05.wechat\01.小程序\01.喵喵看书-v2.0.1\02.后端(book)\Book.Somethingwhat.App\Cat.Web
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=Cat.Web
+--content-root=D:\05.wechat\01.小程序\01.喵喵看书-v2.0.1\02.后端(book)\Book.Somethingwhat.App\Cat.Web
+--file=D:\05.wechat\01.小程序\01.喵喵看书-v2.0.1\02.后端(book)\Book.Somethingwhat.App\Cat.Web\Areas\Web\Views\Home\Index.cshtml

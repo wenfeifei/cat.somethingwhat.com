@@ -1,0 +1,11 @@
+如何新增喵喵看书小程序数据库（mysql）：
+
+step1: 新建数据库，如 [cat.book]
+step2: 执行脚本文件“cat.book.sql”
+step3: 执行脚本文件“sys_account.sql”
+step4: 执行脚本文件“wechat_app_config.sql”
+
+完成。
+
+
+注意：表 wechat_app_config 是一个微信小程序配置表，需要自己去配置你的小程序的appid、secret 等信息

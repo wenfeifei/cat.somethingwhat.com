@@ -1,0 +1,11 @@
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\bin\Debug\netcoreapp2.0\Cat.Somethingwhat.App.deps.json
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\bin\Debug\netcoreapp2.0\Cat.Somethingwhat.App.runtimeconfig.json
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\bin\Debug\netcoreapp2.0\Cat.Somethingwhat.App.runtimeconfig.dev.json
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\bin\Debug\netcoreapp2.0\Cat.Somethingwhat.App.dll
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\bin\Debug\netcoreapp2.0\Cat.Somethingwhat.App.pdb
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\obj\Debug\netcoreapp2.0\Cat.Somethingwhat.App.csprojAssemblyReference.cache
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\obj\Debug\netcoreapp2.0\Cat.Somethingwhat.App.csproj.CoreCompileInputs.cache
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\obj\Debug\netcoreapp2.0\Cat.Somethingwhat.App.AssemblyInfoInputs.cache
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\obj\Debug\netcoreapp2.0\Cat.Somethingwhat.App.AssemblyInfo.cs
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\obj\Debug\netcoreapp2.0\Cat.Somethingwhat.App.dll
+D:\05.wechat\01.小程序\01.喵喵看书\cat.core.app\Cat.Somethingwhat.App\Cat.Somethingwhat.App\obj\Debug\netcoreapp2.0\Cat.Somethingwhat.App.pdb
