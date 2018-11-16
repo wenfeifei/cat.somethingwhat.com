@@ -4,7 +4,7 @@
 
 
 ## 喵喵看书后端
-- .net core 2.0、mysql
+- .net core 2.1、mysql
 
 
 ## 喵喵看书小程序项目构成
