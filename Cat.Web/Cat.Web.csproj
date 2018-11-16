@@ -1,31 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <AssemblyName>Cat.Web</AssemblyName>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Support\**" />
-    <Content Remove="Support\**" />
-    <EmbeddedResource Remove="Support\**" />
-    <None Remove="Support\**" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Configs\Develop\DBChangeTrackerSettings.json" />
-    <Content Remove="Configs\Develop\SiteSettings.json" />
-    <Content Remove="Configs\ueditor_config.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Support\Filter\AccessInterfaceRecordAttribute.cs" />
-    <Compile Include="Support\Filter\CatErrorFilterAttribute.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,38 +22,6 @@
     <ProjectReference Include="..\Cat.Modules\Public\Cat.M.Public.Models\Cat.M.Public.Models.csproj" />
     <ProjectReference Include="..\Cat.Modules\Public\Cat.M.Public.Services\Cat.M.Public.Services.csproj" />
     <ProjectReference Include="..\Cat.Utility\Cat.Utility.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Api\Data\" />
-    <Folder Include="Areas\Api\Views\" />
-    <Folder Include="Areas\Book\Data\" />
-    <Folder Include="Areas\Book\Models\" />
-    <Folder Include="Areas\Book\Views\" />
-    <Folder Include="Areas\Web\Data\" />
-    <Folder Include="Areas\Web\Models\" />
-    <Folder Include="Configs\Test\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI">
-      <HintPath>..\packages\NPOI\NPOI.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.HPSF">
-      <HintPath>..\packages\NPOI\NPOI.HPSF.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.HSSF">
-      <HintPath>..\packages\NPOI\NPOI.HSSF.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.POIFS">
-      <HintPath>..\packages\NPOI\NPOI.POIFS.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.Util">
-      <HintPath>..\packages\NPOI\NPOI.Util.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

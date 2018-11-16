@@ -1,31 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interface\IBookSearchService.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.8.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
-    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.12" />
-    <PackageReference Include="Senparc.Weixin.MP" Version="15.1.4" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.13" />
+    <PackageReference Include="Senparc.Weixin.MP" Version="15.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Cat.Utility\Cat.Utility.csproj" />
+    <ProjectReference Include="..\..\Cache\Cat.M.Cache.Services\Cat.M.Cache.Services.csproj" />
     <ProjectReference Include="..\..\Log\Cat.M.Log.Services\Cat.M.Log.Services.csproj" />
     <ProjectReference Include="..\..\Public\Cat.M.Public.Models\Cat.M.Public.Models.csproj" />
     <ProjectReference Include="..\..\Public\Cat.M.Public.Services\Cat.M.Public.Services.csproj" />
     <ProjectReference Include="..\Cat.M.Book.Models\Cat.M.Book.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interface\" />
   </ItemGroup>
 
 </Project>

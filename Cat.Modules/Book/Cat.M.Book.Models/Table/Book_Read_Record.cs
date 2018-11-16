@@ -52,10 +52,12 @@ namespace Cat.M.Book.Models.Table
         /// <summary>
         /// 是否隐藏
         /// </summary>
+        [Column(TypeName = "bit")]
         public bool? IsHidden { get; set; }
         /// <summary>
         /// 是否已收藏
         /// </summary>
+        [Column(TypeName = "bit")]
         public bool? AlreadyCollected { get; set; }
 
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -13,12 +12,6 @@ namespace Cat.Utility
     /// </summary>
     public static class IPHelper
     {
-        [DllImport("Iphlpapi.dll")]
-        private static extern int SendARP(Int32 dest, Int32 host, ref Int64 mac, ref Int32 length);
-
-        [DllImport("Ws2_32.dll")]
-        private static extern Int32 inet_addr(string ip);
-
         public static Microsoft.AspNetCore.Http.HttpContext Current
         {
             get

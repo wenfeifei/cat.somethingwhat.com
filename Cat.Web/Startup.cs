@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Cat.Foundation;
 using log4net;
 using log4net.Config;
@@ -7,7 +10,6 @@ using log4net.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -15,15 +17,8 @@ namespace Cat.Web
 {
     public class Startup
     {
-
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc()
@@ -38,7 +33,7 @@ namespace Cat.Web
                 );
 
             //services.UseMyConfig();
-            
+
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
         }
@@ -49,11 +44,6 @@ namespace Cat.Web
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles();
@@ -71,7 +61,8 @@ namespace Cat.Web
 
 
             env.UseMyEnv();
-            svp.UseMySvp();
+            //svp.UseMySvp();
+            app.UseMyApp();
 
 
 

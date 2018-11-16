@@ -48,6 +48,7 @@ namespace Cat.M.Public.Models.Table
         /// <summary>
         /// 是否支付成功
         /// </summary>
+        [Column(TypeName = "bit")]
         public bool IsPaySuccessed { get; set; }
         /// <summary>
         /// 支付结果

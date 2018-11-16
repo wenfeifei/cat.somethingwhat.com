@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Cat.M.Public.Models.Table
@@ -36,6 +37,7 @@ namespace Cat.M.Public.Models.Table
         /// <summary>
         /// 账户是否被禁用
         /// </summary>
+        [Column(TypeName = "bit")]
         public bool? Disable { get; set; }
     }
 }

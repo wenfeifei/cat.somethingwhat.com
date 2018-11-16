@@ -47,6 +47,7 @@ namespace Cat.M.Public.Models.Table
         /// <summary>
         /// 是否登录成功
         /// </summary>
+        [Column(TypeName = "bit")]
         public bool? IsSuccessed { get; set; }
     }
 }

@@ -40,6 +40,7 @@ namespace Cat.M.Book.Models.Table
         /// <summary>
         /// 是否屏幕常亮
         /// </summary>
+        [Column(TypeName = "bit")]
         public bool? KeepScreenOn { get; set; }
     }
 }

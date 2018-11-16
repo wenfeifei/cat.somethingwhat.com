@@ -1,4 +1,0 @@
-﻿{
-  //应用哪种缓存，这里填写“MSCache”或“Redis”
-  "CacheModule": "MSCache"
-}
