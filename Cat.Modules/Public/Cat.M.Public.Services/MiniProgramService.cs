@@ -2,6 +2,7 @@
 using Cat.M.Public.Models.ModelBinder.ReturnModels.Wechat;
 using Cat.M.Public.Models.ModelBinder.ReturnModels.WechatAnalysis;
 using Cat.M.Public.Models.Table;
+using Cat.M.Public.Services.Helper;
 using Cat.Utility;
 using System;
 using System.Collections.Generic;
@@ -31,11 +32,13 @@ namespace Cat.M.Public.Services
             if (Cat.Foundation.CatContext.HttpContext.IsLocalHostRequest())
             {
                 //如果是本地调试，则从线上的接口中获取 access_token，避免本地调试后线上的access_token过期
-                var key = $"{Cat.Foundation.ConfigManager.CatSettings.ProjectPrefix}-antd-pro-token";
-                var token = Cat.Foundation.CatContext.HttpContext.Request.Headers[key];
+                var token = ApiHelper.AuthToken;
                 string url = $"http://book.somethingwhat.com/Api/MiniProgram/GetAccessToken?token={token}";
                 var res = HttpHelper.Get(url);
                 ActionRes actionRes = Serializer.JsonDeserialize<ActionRes>(res);
+
+                if (actionRes.Code < 0) throw new Exception(actionRes.Msg);
+
                 access_token = actionRes.Data.ToString();
             }
             else

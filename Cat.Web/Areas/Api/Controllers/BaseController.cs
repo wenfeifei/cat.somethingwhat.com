@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Cat.M.Book.Models.ModelBinder.ReturnModels;
 using Cat.M.Public.Services.Constants;
+using Cat.M.Public.Services.Helper;
 using Cat.Utility;
 using Cat.Web.Support.Filter;
 using Microsoft.AspNetCore.Mvc;
@@ -19,12 +21,26 @@ namespace Cat.Web.Areas.Api.Controllers
         /// </summary>
         public string token => ApiHelper.AuthToken;
 
-        public M.Book.Models.ModelBinder.ReturnModels.ApiAuth ApiAuth
+        public ApiAuth ApiAuth
         {
             get
             {
                 var _token = AesHelper.AesDecrypt(token);
-                var auth = Serializer.JsonDeserialize<Cat.M.Book.Models.ModelBinder.ReturnModels.ApiAuth>(_token);
+
+                ApiAuth auth;
+                if (string.IsNullOrEmpty(_token))
+                {
+                    //访客登录
+                    auth = new ApiAuth()
+                    {
+                        Authority = string.Empty,
+                        LoginTime = DateTime.Now
+                    };
+                }
+                else
+                {
+                    auth = Serializer.JsonDeserialize<ApiAuth>(_token);
+                }
                 return auth;
             }
         }

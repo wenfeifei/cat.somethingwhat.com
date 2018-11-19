@@ -6,6 +6,7 @@ using Cat.Foundation;
 using Cat.M.Public.Models.ModelBinder.ReturnModels.WechatAnalysis;
 using Cat.M.Public.Services;
 using Cat.M.Public.Services.Constants;
+using Cat.Utility;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cat.Web.Areas.Api.Controllers
@@ -345,6 +346,8 @@ namespace Cat.Web.Areas.Api.Controllers
                     {
                         ref_date = begin_time.AddDays(i).ToString(DateFormat)
                     };
+                    if (oneData.visit_uv == null) oneData.visit_uv = new List<DailyRetain.KeyValueModel>();
+                    if (oneData.visit_uv_new == null) oneData.visit_uv_new = new List<DailyRetain.KeyValueModel>();
                 }
                 listData.Add(oneData);
             }
@@ -407,6 +410,8 @@ namespace Cat.Web.Areas.Api.Controllers
                     {
                         ref_date = begin_time.AddDays(i * 7).ToString(DateFormat) + "-" + begin_time.AddDays((i + 1) * 7 - 1).ToString(DateFormat)
                     };
+                    if (oneData.visit_uv == null) oneData.visit_uv = new List<DailyRetain.KeyValueModel>();
+                    if (oneData.visit_uv_new == null) oneData.visit_uv_new = new List<DailyRetain.KeyValueModel>();
                 }
                 listData.Add(oneData);
             }
@@ -471,6 +476,8 @@ namespace Cat.Web.Areas.Api.Controllers
                         visit_uv = new List<DailyRetain.KeyValueModel>() { new DailyRetain.KeyValueModel() { key = 0, value = 0 } },
                         visit_uv_new = new List<DailyRetain.KeyValueModel>() { new DailyRetain.KeyValueModel() { key = 0, value = 0 } },
                     };
+                    if (oneData.visit_uv == null) oneData.visit_uv = new List<DailyRetain.KeyValueModel>();
+                    if (oneData.visit_uv_new == null) oneData.visit_uv_new = new List<DailyRetain.KeyValueModel>();
                 }
                 listData.Add(oneData);
             }

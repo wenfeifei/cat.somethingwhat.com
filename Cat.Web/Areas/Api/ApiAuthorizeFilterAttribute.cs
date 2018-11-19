@@ -1,5 +1,6 @@
 ﻿using Cat.Foundation;
 using Cat.M.Public.Services.Constants;
+using Cat.M.Public.Services.Helper;
 using Cat.Utility;
 using Cat.Web.Areas.Api.Models.Response;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -65,7 +66,7 @@ namespace Cat.Web.Areas.Api
                     //检查认证
                     //string authority = filterContext.HttpContext.Request.Headers["cat-book-antd-pro-authority"];
                     //string userid = filterContext.HttpContext.Request.Headers["cat-book-antd-pro-userid"];
-                    string token = Areas.Api.ApiHelper.AuthToken;
+                    string token = ApiHelper.AuthToken;
                     if (string.IsNullOrEmpty(token))
                     {
                         errorCode = ErrorCode.user_no_authority;
