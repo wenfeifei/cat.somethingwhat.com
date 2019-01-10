@@ -211,7 +211,8 @@ namespace Cat.Utility.Helper.Lambda
                 var propertyReference = Expression.Property(pe, property);
                 //var constantReference = Expression.Constant(val, dyType);
                 var constantReference = Expression.Constant(value, pe.Type.GetProperty(property).PropertyType);
-                var be = Expression.Call(propertyReference, typeof(string).GetMethod("Contains"), constantReference);
+                //var be = Expression.Call(propertyReference, typeof(string).GetMethod("Contains"), constantReference);
+                var be = Expression.Call(propertyReference, typeof(string).GetMethod("Contains", new Type[] { typeof(string) }), constantReference);
                 return be;
             }
             catch (Exception e)
